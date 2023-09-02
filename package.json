@@ -1,0 +1,11 @@
+{
+  "name": "@gamedev/source",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@nx/workspace": "16.7.4",
+    "nx": "16.7.4"
+  },
+  "packageManager": "yarn@3.6.1"
+}
