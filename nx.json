@@ -14,7 +14,7 @@
       "inputs": ["production", "^production"]
     },
     "test": {
-      "inputs": ["default", "^production"]
+      "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"]
     },
     "lint": {
       "inputs": [
@@ -30,7 +30,10 @@
       "default",
       "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
       "!{projectRoot}/tsconfig.spec.json",
-      "!{projectRoot}/.eslintrc.json"
+      "!{projectRoot}/.eslintrc.json",
+      "!{projectRoot}/jest.config.[jt]s",
+      "!{projectRoot}/src/test-setup.[jt]s",
+      "!{projectRoot}/test-setup.[jt]s"
     ],
     "sharedGlobals": []
   },
@@ -40,6 +43,21 @@
       "linter": "eslint",
       "unitTestRunner": "vitest",
       "e2eTestRunner": "none"
+    },
+    "@nx/react": {
+      "application": {
+        "style": "css",
+        "linter": "eslint",
+        "bundler": "webpack",
+        "babel": true
+      },
+      "component": {
+        "style": "css"
+      },
+      "library": {
+        "style": "css",
+        "linter": "eslint"
+      }
     }
   }
 }

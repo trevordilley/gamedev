@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@gamedev/base/phaser": ["libs/base/phaser/src/index.ts"]
+      "@gamedev/base/phaser": ["libs/base/phaser/src/index.ts"],
+      "@gamedev/libs/resources/knight": ["libs/resources/knight/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

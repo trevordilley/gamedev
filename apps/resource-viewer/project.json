@@ -1,0 +1,94 @@
+{
+  "name": "apps/resource-viewer",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/resource-viewer/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/resource-viewer",
+        "index": "apps/resource-viewer/src/index.html",
+        "baseHref": "/",
+        "main": "apps/resource-viewer/src/main.tsx",
+        "tsConfig": "apps/resource-viewer/tsconfig.app.json",
+        "assets": [
+          "apps/resource-viewer/src/favicon.ico",
+          "apps/resource-viewer/src/assets",
+          {"input":  "libs/resources",
+            "glob": "**/resources/*",
+            "output": "./public/resources"
+          }
+        ],
+        "styles": ["apps/resource-viewer/src/styles.css"],
+        "scripts": [],
+        "isolatedConfig": true,
+        "webpackConfig": "apps/resource-viewer/webpack.config.js"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/resource-viewer/src/environments/environment.ts",
+              "with": "apps/resource-viewer/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/webpack:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "apps/resource-viewer:build",
+        "hmr": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "apps/resource-viewer:build:development"
+        },
+        "production": {
+          "buildTarget": "apps/resource-viewer:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/resource-viewer/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/resource-viewer/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}

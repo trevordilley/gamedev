@@ -1,5 +1,5 @@
 {
-  "name": "@gamedev/assets/knight",
+  "name": "@gamedev/libs/resources/knight",
   "version": "0.0.1",
   "dependencies": {
     "tslib": "^2.3.0"
