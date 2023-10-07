@@ -14,7 +14,7 @@ export function knightResource(id: string ) {
 
   return {
     load: (scene: Scene,url?: string, frameConfig?: ImageFrameConfig, xhrSettings?: XHRSettingsObject) =>
-      scene.load.spritesheet(id, url ?? "./assets/knight.png", frameConfig ?? {frameWidth: 36, frameHeight: 48}, xhrSettings),
+      scene.load.spritesheet(id, url ?? "./public/resources/knight/resources/knight.png", frameConfig ?? {frameWidth: 64, frameHeight: 64}, xhrSettings),
     create: (scene: Scene) => {
       scene.anims.create({
         key: WALK_ANIM,
