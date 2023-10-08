@@ -1,0 +1,68 @@
+{
+  "name": "apps/server/resources",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/server/resources/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/server/resources",
+        "main": "apps/server/resources/src/main.ts",
+        "tsConfig": "apps/server/resources/tsconfig.app.json",
+        "assets": ["apps/server/resources/src/assets", {
+          "input": "libs/resources/resources",
+          "glob": "**/*",
+          "output": "assets/resources"
+        }],
+        "isolatedConfig": true,
+        "webpackConfig": "apps/server/resources/webpack.config.js"
+      },
+      "configurations": {
+        "development": {},
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "apps/server/resources:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "apps/server/resources:build:development"
+        },
+        "production": {
+          "buildTarget": "apps/server/resources:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/server/resources/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/server/resources/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}

@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@gamedev/base/phaser": ["libs/base/phaser/src/index.ts"],
-      "@gamedev/libs/resources/knight": ["libs/resources/knight/src/index.ts"],
+      "@gamedev/libs/resources/knight": ["libs/resources/src/index.ts"],
       "@gamedev/react/components//phaser": [
         "libs/react/components/phaser/src/index.ts"
       ]

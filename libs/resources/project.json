@@ -1,17 +1,17 @@
 {
-  "name": "libs/resources/knight",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/resources/knight/src",
+  "name": "libs/resources",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/resources/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/resources/knight",
-        "main": "libs/resources/knight/src/index.ts",
-        "tsConfig": "libs/resources/knight/tsconfig.lib.json",
-        "assets": ["libs/resources/knight/*.md"]
+        "outputPath": "dist/libs/resources",
+        "main": "libs/resources/src/index.ts",
+        "tsConfig": "libs/resources/tsconfig.lib.json",
+        "assets": ["libs/resources/*.md"]
       }
     },
     "lint": {
@@ -19,8 +19,8 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "libs/resources/knight/**/*.ts",
-          "libs/resources/knight/package.json"
+          "libs/resources/**/*.ts",
+          "libs/resources/package.json"
         ]
       }
     },
@@ -28,7 +28,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/resources/knight/jest.config.ts",
+        "jestConfig": "libs/resources/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
