@@ -1,5 +1,5 @@
 {
-  "name": "apps/resource-viewer",
+  "name": "resource-viewer",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/resource-viewer/src",
   "projectType": "application",
@@ -17,10 +17,10 @@
         "tsConfig": "apps/resource-viewer/tsconfig.app.json",
         "assets": [
           "apps/resource-viewer/src/favicon.ico",
-          "apps/resource-viewer/src/assets",
-          {"input":  "libs/resources",
-            "glob": "**/resources/*",
-            "output": "./public/resources"
+          "apps/resource-viewer/src/assets", {
+            "input": "libs",
+            "glob": "resources/**/*.png,",
+            "output": "resources"
           }
         ],
         "styles": ["apps/resource-viewer/src/styles.css"],
@@ -55,15 +55,15 @@
       "executor": "@nx/webpack:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "apps/resource-viewer:build",
+        "buildTarget": "resource-viewer:build",
         "hmr": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "apps/resource-viewer:build:development"
+          "buildTarget": "resource-viewer:build:development"
         },
         "production": {
-          "buildTarget": "apps/resource-viewer:build:production",
+          "buildTarget": "resource-viewer:build:production",
           "hmr": false
         }
       }

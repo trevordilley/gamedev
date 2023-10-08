@@ -1,7 +1,5 @@
 
 import {Scene} from "phaser"
-import XHRSettingsObject = Phaser.Types.Loader.XHRSettingsObject;
-import ImageFrameConfig = Phaser.Types.Loader.FileTypes.ImageFrameConfig;
 export function knightResource(id: string ) {
   const namespace = "knight/anim"
 
@@ -13,18 +11,20 @@ export function knightResource(id: string ) {
 
 
   return {
-    load: (scene: Scene,url?: string, frameConfig?: ImageFrameConfig, xhrSettings?: XHRSettingsObject) =>
-      scene.load.spritesheet(id, url ?? "./public/resources/knight/resources/knight.png", frameConfig ?? {frameWidth: 64, frameHeight: 64}, xhrSettings),
+    load: (scene: Scene,url?: string) =>
+      scene.load.spritesheet(id, url ?? "./public/resources/knight/resources/knight.png", {frameWidth: 64, frameHeight: 64}),
     create: (scene: Scene) => {
       scene.anims.create({
         key: WALK_ANIM,
-        frames: scene.anims.generateFrameNumbers(id, {start: 3, end: 6}),
-        frameRate
+        frames: scene.anims.generateFrameNumbers(id, {start: 0, end: 6}),
+        frameRate,
+        repeat: -1
       })
       scene.anims.create({
         key: ATTACK_ANIM,
         frames: scene.anims.generateFrameNumbers(id, {start: 7, end: 10}),
-        frameRate
+        frameRate,
+        repeat: -1
       })
     },
     add:(scene: Scene, x: number, y: number) => {

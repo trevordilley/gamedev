@@ -1901,6 +1901,7 @@ __metadata:
     "@swc/helpers": ~0.5.2
     "@testing-library/react": 14.0.0
     "@types/jest": ^29.4.0
+    "@types/lodash": ^4.14.199
     "@types/node": 18.14.2
     "@types/react": 18.2.24
     "@types/react-dom": 18.2.9
@@ -1919,6 +1920,7 @@ __metadata:
     jest-environment-jsdom: ^29.4.1
     jest-environment-node: ^29.4.1
     jsdom: ~22.1.0
+    lodash: ^4.17.21
     nx: 16.10.0
     phaser: ^3.60.0
     prettier: ^2.6.2
@@ -3663,6 +3665,13 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: e009a2bfb50e90ca9b7c6e8f648f8464067271fd99116f881073fa6fa76dc8d0133181dd65e6614d5fb1220d671d67b0124aef7d97dc02d7e342ab143a47779d
+  languageName: node
+  linkType: hard
+
+"@types/lodash@npm:^4.14.199":
+  version: 4.14.199
+  resolution: "@types/lodash@npm:4.14.199"
+  checksum: e68d1fcbbfce953ed87b296a628573f62939227bcda0c934954e862b421e8a34c5e71cad6fea27b9980567909e6a4698f09025692958e36d64ea9ed99ec6fb2e
   languageName: node
   linkType: hard
 
@@ -9842,7 +9851,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.14, lodash@npm:~4.17.15":
+"lodash@npm:^4.17.14, lodash@npm:^4.17.21, lodash@npm:~4.17.15":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7

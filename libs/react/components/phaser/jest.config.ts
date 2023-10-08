@@ -1,11 +1,11 @@
 /* eslint-disable */
 export default {
-  displayName: 'resource-viewer',
-  preset: '../../jest.preset.js',
+  displayName: 'react-components--phaser',
+  preset: '../../../../jest.preset.js',
   transform: {
     '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nx/react/plugins/jest',
     '^.+\\.[tj]sx?$': ['babel-jest', { presets: ['@nx/react/babel'] }],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/apps/resource-viewer',
+  coverageDirectory: '../../../../coverage/libs/react/components/phaser',
 };
