@@ -1,7 +1,8 @@
 import { Scene } from 'phaser';
 import {PATHS} from "../PATHS";
+import {Character, CharacterFactory} from "../types";
 
-export const knightResource = ( scene: Scene,baseUrl: string,id = "knight") => {
+export const knightResource = ( scene: Scene,baseUrl: string,id = "knight"): CharacterFactory => {
   const namespace = 'knight/anim';
 
   const frameRate = 8;
@@ -31,12 +32,19 @@ export const knightResource = ( scene: Scene,baseUrl: string,id = "knight") => {
         repeat: -1,
       });
     },
-    add: (x: number, y: number) => {
-      const knight = scene.add.sprite(x, y, id);
+    add: (x?: number, y?: number): Character => {
+      const knight = scene.add.sprite(x ?? 0, y ?? 0, id);
       return {
-        knight,
+        sprite: knight,
+        idle: () => knight.play(WALK_ANIM),
         walk: () => knight.play(WALK_ANIM),
+        run: () => knight.play(WALK_ANIM),
+        damaged: () => knight.play(WALK_ANIM),
+        dying: () => knight.play(WALK_ANIM),
+        dead: () => knight.play(WALK_ANIM),
         attack: () => knight.play(ATTACK_ANIM),
+        casting: () => knight.play(ATTACK_ANIM),
+        defending: () => knight.play(ATTACK_ANIM),
       };
     },
   };

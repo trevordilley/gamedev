@@ -1529,6 +1529,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@edict/edict@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@edict/edict@npm:1.0.1"
+  peerDependencies:
+    "@edict/rete": 1.0.1
+    "@edict/types": 1.0.1
+    lodash: ^4.17.21
+    tslib: ^2.3.0
+  checksum: bb218cf4d75751fd4bdc5dd6894f9daf573fe67be19b81a342546eaeeb408617da1c9a9986a81d8ed32e771d484c0c4e66a853d136dc37476ec4333b24d197a9
+  languageName: node
+  linkType: hard
+
 "@esbuild/android-arm64@npm:0.17.19":
   version: 0.17.19
   resolution: "@esbuild/android-arm64@npm:0.17.19"
@@ -1885,6 +1897,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.14.5
     "@babel/preset-react": ^7.14.5
+    "@edict/edict": ^1.0.1
     "@nx/eslint-plugin": 16.10.0
     "@nx/express": 16.10.0
     "@nx/jest": 16.10.0

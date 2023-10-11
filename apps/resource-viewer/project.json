@@ -17,11 +17,7 @@
         "tsConfig": "apps/resource-viewer/tsconfig.app.json",
         "assets": [
           "apps/resource-viewer/src/favicon.ico",
-          "apps/resource-viewer/src/assets", {
-            "input": "libs",
-            "glob": "resources/**/*.png,",
-            "output": "resources"
-          }
+          "apps/resource-viewer/src/assets"
         ],
         "styles": ["apps/resource-viewer/src/styles.css"],
         "scripts": [],
