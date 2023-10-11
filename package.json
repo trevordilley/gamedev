@@ -4,7 +4,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "nx run-many -t build --all"
+    "build": "nx run-many -t build --all",
+    "dev:resources": "nx run-many -t serve -p resource-viewer  apps/server/resources"
   },
   "devDependencies": {
     "@babel/core": "^7.14.5",
