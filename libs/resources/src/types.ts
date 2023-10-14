@@ -1,5 +1,14 @@
 import Sprite = Phaser.GameObjects.Sprite;
+import Image = Phaser.GameObjects.Image;
 
+export interface Background {
+  image: Image,
+}
+
+export interface BackgroundFactory {
+  load: () => void,
+  create: (width?: number, y?: number) => Background
+}
 export interface CharacterFactory {
   load: () => void
   create: () => void
