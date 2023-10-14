@@ -14,7 +14,10 @@ export class BaseScene extends Scene {
 
   create() {
     this.knightFactory.create()
-    const knight = this.knightFactory.add(100, 200)
-    knight.walk()
+    this.knightFactory.add(50, 200).idle()
+    this.knightFactory.add(150, 200).walk()
+    this.knightFactory.add(250, 200).attack()
+    this.knightFactory.add(50, 300).damaged()
+    this.knightFactory.add(150, 300).dying()
   }
 }

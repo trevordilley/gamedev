@@ -54,14 +54,19 @@ const GameGui = (props: PropsWithChildren<GameProps>) => {
 }
 
 class GameContainer extends Component<GameProps> {
-
+  inited: Phaser.Types.Core.GameConfig | undefined = undefined
   shouldComponentUpdate(nextProps: GameProps, nextState: object) {
     return !_.isEqual(this.props, nextProps)
   }
 
   componentDidMount() {
     const {config} = this.props
-    new Game( { ...config, parent: hostElementId } )
+
+    // Doing this means we can work in strict mode. Creating a game is naturally side-effectful
+    if(!this.inited) {
+      this.inited = config
+      new Game( { ...config, parent: hostElementId } )
+    }
   }
 
   render() {
