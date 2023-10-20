@@ -1,17 +1,17 @@
 {
   "name": "libs/resources",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/resources/src",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/kaboom/resources/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/resources",
-        "main": "libs/resources/src/index.ts",
-        "tsConfig": "libs/resources/tsconfig.lib.json",
-        "assets": ["libs/resources/*.md"]
+        "outputPath": "dist/libs/kaboom/resources",
+        "main": "libs/kaboom/resources/src/index.ts",
+        "tsConfig": "libs/kaboom/resources/tsconfig.lib.json",
+        "assets": ["libs/kaboom/resources/*.md"]
       }
     },
     "lint": {
@@ -19,8 +19,8 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "libs/resources/**/*.ts",
-          "libs/resources/package.json"
+          "libs/kaboom/resources/**/*.ts",
+          "libs/kaboom/resources/package.json"
         ]
       }
     },
@@ -28,7 +28,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/resources/jest.config.ts",
+        "jestConfig": "libs/kaboom/resources/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {

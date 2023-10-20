@@ -15,7 +15,7 @@
         "main": "apps/server/resources/src/main.ts",
         "tsConfig": "apps/server/resources/tsconfig.app.json",
         "assets": ["apps/server/resources/src/assets", {
-          "input": "libs/resources/resources",
+          "input": "libs/kaboom/resources/resources",
           "glob": "**/*",
           "output": "assets/resources"
         }],

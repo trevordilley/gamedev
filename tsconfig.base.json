@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@gamedev/libs/kaboom/game": ["libs/kaboom/game/src/index.ts"],
-      "@gamedev/libs/resources/knight": ["libs/resources/src/index.ts"]
+      "@gamedev/libs/resources/knight": ["libs/kaboom/resources/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
