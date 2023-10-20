@@ -1,8 +1,8 @@
 {
-  "name": "apps/resource-viewer",
+  "name": "apps/kaboom-test",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/resource-viewer/src",
+  "sourceRoot": "apps/kaboom-test/src",
   "tags": [],
   "targets": {
     "build": {
@@ -10,18 +10,18 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/resource-viewer",
+        "outputPath": "dist/apps/kaboom-test",
         "compiler": "swc",
-        "main": "apps/resource-viewer/src/main.ts",
-        "tsConfig": "apps/resource-viewer/tsconfig.app.json",
-        "webpackConfig": "apps/resource-viewer/webpack.config.js",
+        "main": "apps/kaboom-test/src/main.ts",
+        "tsConfig": "apps/kaboom-test/tsconfig.app.json",
+        "webpackConfig": "apps/kaboom-test/webpack.config.js",
         "assets": [
-          "apps/resource-viewer/src/favicon.ico",
-          "apps/resource-viewer/src/assets"
+          "apps/kaboom-test/src/favicon.ico",
+          "apps/kaboom-test/src/assets"
         ],
-        "index": "apps/resource-viewer/src/index.html",
+        "index": "apps/kaboom-test/src/index.html",
         "baseHref": "/",
-        "styles": ["apps/resource-viewer/src/styles.css"],
+        "styles": ["apps/kaboom-test/src/styles.css"],
         "scripts": []
       },
       "configurations": {
@@ -34,8 +34,8 @@
           "vendorChunk": false,
           "fileReplacements": [
             {
-              "replace": "apps/resource-viewer/src/environments/environment.ts",
-              "with": "apps/resource-viewer/src/environments/environment.prod.ts"
+              "replace": "apps/kaboom-test/src/environments/environment.ts",
+              "with": "apps/kaboom-test/src/environments/environment.prod.ts"
             }
           ]
         }
@@ -44,11 +44,11 @@
     "serve": {
       "executor": "@nx/webpack:dev-server",
       "options": {
-        "buildTarget": "apps/resource-viewer:build"
+        "buildTarget": "apps/kaboom-test:build"
       },
       "configurations": {
         "production": {
-          "buildTarget": "apps/resource-viewer:build:production"
+          "buildTarget": "apps/kaboom-test:build:production"
         }
       }
     },
@@ -57,14 +57,14 @@
       "outputs": ["{options.reportsDirectory}"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/apps/resource-viewer"
+        "reportsDirectory": "../../coverage/apps/kaboom-test"
       }
     },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/resource-viewer/**/*.ts"]
+        "lintFilePatterns": ["apps/kaboom-test/**/*.ts"]
       }
     }
   }
