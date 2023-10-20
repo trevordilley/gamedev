@@ -30,10 +30,10 @@ const anims = {
 
 // refine the `play()` more so you can't make a typo
 // type AllowedAnims = keyof typeof anims
-export const knightSprite = (k: KaboomCtx, baseUrl: string, id = "knight") => {
+export const knightSprite = (k: KaboomCtx, id = "knight") => {
 
 
-  k.loadSprite(id,PATHS(baseUrl).KNIGHT , {
+  k.loadSprite(id,"knight.png" , {
     sliceX: 27,
     sliceY: 1,
     anims
