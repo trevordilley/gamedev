@@ -33,11 +33,11 @@ const anims = {
 export const knightSprite = (k: KaboomCtx, baseUrl: string, id = "knight") => {
 
 
-  k.loadSprite("knight",PATHS(baseUrl).KNIGHT , {
+  k.loadSprite(id,PATHS(baseUrl).KNIGHT , {
     sliceX: 27,
     sliceY: 1,
     anims
   })
 
-  return (opts?: SpriteCompOpt) => k.sprite("knight", {anim: "idle", ...opts})
+  return (opts?: SpriteCompOpt) => k.sprite(id, {anim: "idle", ...opts})
 }
