@@ -56,8 +56,9 @@ export const LevelEditor: FC<LevelEditorProps> = (props) => {
         k.add([
           polygon(k, {
             pts,
-            color: k.rgb(255,0,0)
           }),
+          k.color(255,0,0),
+          k.opacity(0.2)
         ])
       }
 
