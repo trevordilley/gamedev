@@ -1,6 +1,7 @@
 import {FC, useLayoutEffect, useMemo, useRef} from "react";
 import {game} from "@gamedev/libs/kaboom/game"
 import {KaboomCtx, Polygon, Vec2} from "kaboom";
+import {polygon} from "@gamedev/libs/kaboom/components";
 interface Poly {
   id: number,
   tags?: string[],
@@ -47,15 +48,22 @@ export const LevelEditor: FC<LevelEditorProps> = (props) => {
         cursor.text = mousePosLabel(pos)
       })
 
-      k.onDraw(() => {
-        // Load the polygons for the level
-        for(const p of polygons) {
-          const points = [...p.points, p.points[0]]
-          const pts = points.map(([x, y]) => k.vec2(x, y))
-          const color = k.rgb(p.fill.r, p.fill.g, p.fill.b)
-          k.drawLines({pts, color, width: 4,  })
-        }
-      })
+      for(const p of polygons) {
+        // const points = [...p.points, p.points[0]]
+        const pts = p.points.map(([x, y]) => k.vec2(x, y))
+        // const color = k.rgb(p.fill.r, p.fill.g, p.fill.b)
+        // k.drawLines({pts, color, width: 4,  })
+        k.add([
+          polygon(k, {
+            pts,
+            color: k.rgb(255,0,0)
+          }),
+        ])
+      }
+
+      // k.onDraw(() => {
+      //   // Load the polygons for the level
+      // })
 
     }
 

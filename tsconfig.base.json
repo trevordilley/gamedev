@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@gamedev/libs/kaboom/components": [
+        "libs/kaboom/components/src/index.ts"
+      ],
       "@gamedev/libs/kaboom/game": ["libs/kaboom/game/src/index.ts"],
       "@gamedev/libs/resources/knight": ["libs/kaboom/resources/src/index.ts"]
     }
