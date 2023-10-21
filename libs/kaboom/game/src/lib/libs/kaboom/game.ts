@@ -5,5 +5,6 @@ export const game = (opts: KaboomOpt & {resourceUrl?: string, run: (ctx: KaboomC
   if(opts.resourceUrl) {
     ctx.loadRoot(opts.resourceUrl)
   }
-  return opts.run(ctx)
+  opts.run(ctx)
+  return ctx
 }
