@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "packages": {
+    "kaboom": {
+      "signature": "80505c6b11283b31ec67b56710f56e13",
+      "file": true,
+      "replaced": "^3000.1.13"
+    }
+  }
+}
