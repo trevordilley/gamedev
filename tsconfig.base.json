@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@gamedev/libs/hyperlap2d/parser": [
+        "libs/hyperlap2d/parser/src/index.ts"
+      ],
       "@gamedev/libs/kaboom/components": [
         "libs/kaboom/components/src/index.ts"
       ],
