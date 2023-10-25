@@ -1,88 +1,74 @@
 pack.png
-	size: 2048, 2048
+	size: 1024, 512
 	filter: Linear, Linear
-knight
-	index: 23
-	bounds: 1983, 1425, 64, 64
-knight
-	index: 25
-	bounds: 1983, 1425, 64, 64
-knight
-	index: 22
-	bounds: 1983, 1359, 64, 64
-knight
-	index: 26
-	bounds: 1983, 1359, 64, 64
-knight
-	index: 20
-	bounds: 1983, 1293, 64, 64
-knight
-	index: 14
-	bounds: 1983, 1293, 64, 64
-knight
-	index: 0
-	bounds: 1983, 1293, 64, 64
-knight
-	index: 21
-	bounds: 1983, 1227, 64, 64
-knight
-	index: 19
-	bounds: 1983, 1161, 64, 64
-knight
-	index: 18
-	bounds: 1983, 1095, 64, 64
-knight
-	index: 24
-	bounds: 1983, 1029, 64, 64
-knight
-	index: 8
-	bounds: 1983, 963, 64, 64
-knight
-	index: 9
-	bounds: 1983, 897, 64, 64
-knight
-	index: 16
-	bounds: 1983, 831, 64, 64
-knight
-	index: 4
-	bounds: 1983, 765, 64, 64
-knight
-	index: 13
-	bounds: 1983, 765, 64, 64
-knight
-	index: 5
-	bounds: 1983, 699, 64, 64
-knight
-	index: 17
-	bounds: 1983, 633, 64, 64
-knight
-	index: 15
-	bounds: 1983, 567, 64, 64
-knight
-	index: 7
-	bounds: 1983, 501, 64, 64
-knight
-	index: 6
-	bounds: 1983, 435, 64, 64
-knight
-	index: 12
-	bounds: 1983, 435, 64, 64
-knight
-	index: 10
-	bounds: 1983, 369, 64, 64
-knight
-	index: 2
-	bounds: 1983, 303, 64, 64
-knight
+orc
 	index: 3
-	bounds: 1983, 237, 64, 64
-knight
+	bounds: 1, 264, 128, 128
+orc
 	index: 11
-	bounds: 1983, 171, 64, 64
-knight
+	bounds: 1, 134, 128, 128
+orc
+	index: 7
+	bounds: 1, 134, 128, 128
+orc
+	index: 10
+	bounds: 131, 264, 128, 128
+orc
+	index: 8
+	bounds: 131, 264, 128, 128
+orc
+	index: 2
+	bounds: 1, 4, 128, 128
+orc
+	index: 4
+	bounds: 1, 4, 128, 128
+orc
+	index: 0
+	bounds: 131, 134, 128, 128
+orc
+	index: 6
+	bounds: 131, 134, 128, 128
+orc
+	index: 12
+	bounds: 261, 264, 128, 128
+orc
+	index: 13
+	bounds: 131, 4, 128, 128
+orc
 	index: 1
-	bounds: 1983, 105, 64, 64
-openExterior
-	bounds: 1, 4, 1980, 1485
+	bounds: 261, 134, 128, 128
+orc
+	index: 5
+	bounds: 261, 134, 128, 128
+orc
+	index: 17
+	bounds: 391, 264, 128, 128
+orc
+	index: 16
+	bounds: 261, 4, 128, 128
+orc
+	index: 14
+	bounds: 391, 134, 128, 128
+orc
+	index: 15
+	bounds: 521, 264, 128, 128
+orc
+	index: 18
+	bounds: 391, 4, 128, 128
+orc
+	index: 19
+	bounds: 521, 134, 128, 128
+orc
+	index: 9
+	bounds: 651, 264, 128, 128
+orc
+	index: 22
+	bounds: 521, 4, 128, 128
+orc
+	index: 21
+	bounds: 651, 134, 128, 128
+orc
+	index: 20
+	bounds: 781, 264, 128, 128
 white-pixel
 	bounds: 1, 1, 1, 1

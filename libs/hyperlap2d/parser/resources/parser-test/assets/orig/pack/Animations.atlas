@@ -1,0 +1,84 @@
+Animations.png
+	size: 512, 256
+	filter: Linear, Linear
+knight
+	index: 23
+	bounds: 1, 133, 64, 64
+knight
+	index: 25
+	bounds: 1, 133, 64, 64
+knight
+	index: 22
+	bounds: 1, 67, 64, 64
+knight
+	index: 26
+	bounds: 1, 67, 64, 64
+knight
+	index: 20
+	bounds: 67, 133, 64, 64
+knight
+	index: 14
+	bounds: 67, 133, 64, 64
+knight
+	index: 0
+	bounds: 67, 133, 64, 64
+knight
+	index: 21
+	bounds: 1, 1, 64, 64
+knight
+	index: 19
+	bounds: 67, 67, 64, 64
+knight
+	index: 18
+	bounds: 133, 133, 64, 64
+knight
+	index: 24
+	bounds: 67, 1, 64, 64
+knight
+	index: 8
+	bounds: 133, 67, 64, 64
+knight
+	index: 9
+	bounds: 199, 133, 64, 64
+knight
+	index: 16
+	bounds: 133, 1, 64, 64
+knight
+	index: 4
+	bounds: 199, 67, 64, 64
+knight
+	index: 13
+	bounds: 199, 67, 64, 64
+knight
+	index: 5
+	bounds: 265, 133, 64, 64
+knight
+	index: 17
+	bounds: 199, 1, 64, 64
+knight
+	index: 15
+	bounds: 265, 67, 64, 64
+knight
+	index: 7
+	bounds: 331, 133, 64, 64
+knight
+	index: 6
+	bounds: 265, 1, 64, 64
+knight
+	index: 12
+	bounds: 265, 1, 64, 64
+knight
+	index: 10
+	bounds: 331, 67, 64, 64
+knight
+	index: 2
+	bounds: 397, 133, 64, 64
+knight
+	index: 3
+	bounds: 331, 1, 64, 64
+knight
+	index: 11
+	bounds: 397, 67, 64, 64
+knight
+	index: 1
+	bounds: 397, 1, 64, 64
