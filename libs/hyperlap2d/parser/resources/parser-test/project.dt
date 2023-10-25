@@ -18,10 +18,80 @@
       "shaderVO": {}
     }
   ],
+  "libraryActions": {
+    "TestAction": {
+      "version": 1,
+      "nodes": [
+        {
+          "id": "7cc0cc5269ea407d942d924a926251e3",
+          "type": "ValueFloat",
+          "x": 53,
+          "y": 247,
+          "data": {
+            "v1": "5.0"
+          }
+        },
+        {
+          "id": "74b77d1be5a04177a5ff1b2c6a97e3a6",
+          "type": "EventAction",
+          "x": 50,
+          "y": 175,
+          "data": {
+            "v": "Boom!"
+          }
+        },
+        {
+          "id": "907045f7d36b4726921eb986f2affea8",
+          "type": "Entity",
+          "x": 109,
+          "y": 50
+        },
+        {
+          "id": "ddb942e30742437794bf880096dbf22c",
+          "type": "RepeatAction",
+          "x": 255.00012,
+          "y": 205.00003
+        },
+        {
+          "id": "end",
+          "type": "Function",
+          "x": 481,
+          "y": 155
+        }
+      ],
+      "connections": [
+        {
+          "fromNode": "7cc0cc5269ea407d942d924a926251e3",
+          "fromField": "value",
+          "toNode": "ddb942e30742437794bf880096dbf22c",
+          "toField": "count"
+        },
+        {
+          "fromNode": "74b77d1be5a04177a5ff1b2c6a97e3a6",
+          "fromField": "action",
+          "toNode": "ddb942e30742437794bf880096dbf22c",
+          "toField": "action0"
+        },
+        {
+          "fromNode": "907045f7d36b4726921eb986f2affea8",
+          "fromField": "entity",
+          "toNode": "end",
+          "toField": "entity"
+        },
+        {
+          "fromNode": "ddb942e30742437794bf880096dbf22c",
+          "fromField": "action",
+          "toNode": "end",
+          "toField": "action"
+        }
+      ]
+    }
+  },
   "imagesPacks": {
     "main": {
       "name": "main",
       "regions": [
+        "Test",
         "white-pixel"
       ]
     },
