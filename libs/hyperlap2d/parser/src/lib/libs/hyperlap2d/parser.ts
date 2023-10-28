@@ -1,4 +1,5 @@
 import * as zod from "zod"
+import {HyperLap2DScene, HyperLap2DSceneSchema} from "./parser.scene";
 const OriginalResolutionSchema = zod.object({
   name: zod.string(),
   width: zod.number(),
@@ -53,15 +54,17 @@ type HyperLap2DProject = zod.infer<typeof HyperLap2DProjectSchema>
 
 interface HyperLap2D {
   project: HyperLap2DProject
+  scenes: HyperLap2DScene[]
 }
 export const parseHyperLap2DExport = (
   project: object,
   scenes: object[],
 
-) => {
+): HyperLap2D => {
  const hyperLap2DProject = HyperLap2DProjectSchema.parse(project)
+  const hyperLap2DScenes = scenes.map (s => HyperLap2DSceneSchema.parse(s))
   return {
     project: hyperLap2DProject,
-    scenes: []
+    scenes: hyperLap2DScenes
   }
 }
