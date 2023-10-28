@@ -13,7 +13,7 @@ const scene = () => {
   return JSON.parse(sceneDataRaw.toString())
 }
 
-describe('libsHyperlap2dParser', () => {
+describe('HyperLap2D parser', () => {
   it('should work', () => {
     const hyperLap = parseHyperLap2DExport(proj(), [scene()])
   });

@@ -76,6 +76,7 @@ export const HyperLap2DSceneSchema = zod.object({
           currentAnimation: zod.string(),
           frameRangeMap: zod.object({
             name: zod.string(),
+            startFrame: zod.number().optional(),
             endFrame: zod.number()
           }).array(),
           playMode: zod.number()
