@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@gamedev/libs/hyperlap2d/codegen": [
+        "libs/hyperlap2d/codegen/src/index.ts"
+      ],
       "@gamedev/libs/hyperlap2d/parser": [
         "libs/hyperlap2d/parser/src/index.ts"
       ],
