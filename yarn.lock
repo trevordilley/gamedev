@@ -1925,7 +1925,7 @@ __metadata:
     jest-environment-jsdom: ^29.4.1
     jest-environment-node: ^29.4.1
     jsdom: ~22.1.0
-    kaboom: ^3000.1.13
+    kaboom: "file:.yalc/kaboom"
     lodash: ^4.17.21
     nx: 16.10.0
     phaser: ^3.60.0
@@ -1942,6 +1942,7 @@ __metadata:
     vite: ~4.3.9
     vite-plugin-dts: ~2.3.0
     vitest: ~0.32.0
+    zod: ^3.22.4
   languageName: unknown
   linkType: soft
 
@@ -9670,10 +9671,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"kaboom@npm:^3000.1.13":
+"kaboom@file:.yalc/kaboom::locator=%40gamedev%2Fsource%40workspace%3A.":
   version: 3000.1.13
-  resolution: "kaboom@npm:3000.1.13"
-  checksum: 4b1cfba0d2127636eade0fe125def25908e8bb1616ac6ee012c9cf18dbe1e16708d3ec4defc9f823cba23584d45a643d01bf5d901f38396162e07d350c855dc3
+  resolution: "kaboom@file:.yalc/kaboom#.yalc/kaboom::hash=5a372f&locator=%40gamedev%2Fsource%40workspace%3A."
+  checksum: 693a6dde9ed7e820443d87a37fc3314ee5f7e6ada30cab9ff24d3fd6863a245f3d726f513c08900f423a44cc49d50c5d8df66e9c519e67dcacf9eea57a3f32bc
   languageName: node
   linkType: hard
 
@@ -14657,5 +14658,12 @@ __metadata:
   bin:
     z-schema: bin/z-schema
   checksum: 8a1d66817ae4384dc3f63311f0cccaadd95cc9640eaade5fd3fbf91aa80d6bb82fb95d9b9171fa82ac371a0155b32b7f5f77bbe84dabaca611b66f74c628f0b8
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.22.4":
+  version: 3.22.4
+  resolution: "zod@npm:3.22.4"
+  checksum: 80bfd7f8039b24fddeb0718a2ec7c02aa9856e4838d6aa4864335a047b6b37a3273b191ef335bf0b2002e5c514ef261ffcda5a589fb084a48c336ffc4cdbab7f
   languageName: node
   linkType: hard
